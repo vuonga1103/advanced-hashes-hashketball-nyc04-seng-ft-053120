@@ -138,6 +138,7 @@ def num_points_scored(player_name)
 
     all_players(team_type)[:points] if all_players(team_type)[:player_name] == player_name
     binding.pry
+    "hello"
   end
   #
   # game_hash[:home][:players].each do |player_hash|
