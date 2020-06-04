@@ -128,16 +128,23 @@ def game_hash
   }
 end
 
-
 def num_points_scored(player_name)
-
-  game_hash[:home][:players].each do |player_hash|
-    return player_hash[:points] if player_hash[:player_name] == player_name
+  # Function that takes in a team type (i.e. home or away) and returns all of the stats of the players who are in that team
+  def all_players(team_type)
+    game_hash[team_type][:players]
   end
 
-  game_hash[:away][:players].each do |player_hash|
-    return player_hash[:points] if player_hash[:player_name] == player_name
+  game_hash.each do |team_type|
+    all_players(team_type)[:points] if all_players(team_type)[:player_name] == player_name
   end
+  # 
+  # game_hash[:home][:players].each do |player_hash|
+  #   return player_hash[:points] if player_hash[:player_name] == player_name
+  # end
+  # 
+  # game_hash[:away][:players].each do |player_hash|
+  #   return player_hash[:points] if player_hash[:player_name] == player_name
+  # end
 
 end
 
