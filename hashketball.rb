@@ -150,6 +150,7 @@ def num_points_scored(player_name)
 
 end
 
+p num_points_scored("Jeff Adrien")
 
 def shoe_size(player_name)
   game_hash[:home][:players].each do |player_hash|
