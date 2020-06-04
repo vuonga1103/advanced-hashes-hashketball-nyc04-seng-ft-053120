@@ -141,7 +141,7 @@ def num_points_scored(player_name)
   # game_hash[:home][:players].each do |player_hash|
   #   return player_hash[:points] if player_hash[:player_name] == player_name
   # end
-  # 
+  #
   # game_hash[:away][:players].each do |player_hash|
   #   return player_hash[:points] if player_hash[:player_name] == player_name
   # end
@@ -218,5 +218,5 @@ def big_shoe_rebounds
       return player_hash[:rebounds] if player_hash[:shoe] == biggest_shoe_size
     end
   end
-  
+
 end
